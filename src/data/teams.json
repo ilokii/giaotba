@@ -1,0 +1,13 @@
+{
+  "example_team": {
+    "leagueId": "example_league",
+    "name": "示例球队",
+    "logo": "/teams/example_team.png",
+    "players": [
+      {
+        "id": "example_player",
+        "number": "23"
+      }
+    ]
+  }
+} 
