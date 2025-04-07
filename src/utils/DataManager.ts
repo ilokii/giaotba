@@ -1,4 +1,4 @@
-import { League, Team, Player, Match } from '../types/data';
+import { League, Team, Player, Match, PlayerBase } from '../types/data';
 
 export default class DataManager {
   private static instance: DataManager;
@@ -7,6 +7,7 @@ export default class DataManager {
     teams: Map<string, Team>;
     players: Map<string, Player>;
     matches: Map<string, Match>;
+    playerBase: Map<string, PlayerBase>;
   };
 
   private constructor() {
@@ -14,7 +15,8 @@ export default class DataManager {
       leagues: new Map(),
       teams: new Map(),
       players: new Map(),
-      matches: new Map()
+      matches: new Map(),
+      playerBase: new Map()
     };
   }
 
@@ -38,10 +40,10 @@ export default class DataManager {
       const teamsData = await teamsResponse.json();
       this.validateAndCacheTeams(teamsData);
 
-      // 加载球员数据
-      const playersResponse = await fetch('/data/playerBase.json');
-      const playersData = await playersResponse.json();
-      this.validateAndCachePlayers(playersData);
+      // 加载球员基础数据
+      const playerBaseResponse = await fetch('/data/playerBase.json');
+      const playerBaseData = await playerBaseResponse.json();
+      this.validateAndCachePlayerBase(playerBaseData);
 
       // 加载比赛数据
       const matchesResponse = await fetch('/data/matches.json');
@@ -82,6 +84,21 @@ export default class DataManager {
     Object.entries(data).forEach(([id, match]) => {
       if (this.validateMatch({ id, ...match })) {
         this.cache.matches.set(id, { id, ...match });
+      }
+    });
+  }
+
+  private validatePlayerBase(player: any): player is PlayerBase {
+    return (
+      typeof player.id === 'string' &&
+      typeof player.name === 'string'
+    );
+  }
+
+  private validateAndCachePlayerBase(data: Record<string, any>): void {
+    Object.entries(data).forEach(([id, player]) => {
+      if (this.validatePlayerBase({ id, ...player })) {
+        this.cache.playerBase.set(id, { id, ...player });
       }
     });
   }
@@ -178,6 +195,13 @@ export default class DataManager {
     return this.cache.matches.get(id);
   }
 
+  public getPlayerBase(id?: string): PlayerBase | undefined | Map<string, PlayerBase> {
+    if (id) {
+      return this.cache.playerBase.get(id);
+    }
+    return this.cache.playerBase;
+  }
+
   // 列表获取方法
   public getAllLeagues(): League[] {
     return Array.from(this.cache.leagues.values());
@@ -210,5 +234,6 @@ export default class DataManager {
     this.cache.teams.clear();
     this.cache.players.clear();
     this.cache.matches.clear();
+    this.cache.playerBase.clear();
   }
 } 

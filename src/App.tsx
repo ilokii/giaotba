@@ -8,6 +8,7 @@ import League from './pages/League';
 import Team from './pages/Team';
 import Player from './pages/Player';
 import Match from './pages/Match';
+import { Players } from './pages/Players';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/leagues" element={<LeagueList />} />
             <Route path="/leagues/:leagueId" element={<League />} />
             <Route path="/teams/:teamId" element={<Team />} />
+            <Route path="/players" element={<Players />} />
             <Route path="/players/:playerId" element={<Player />} />
             <Route path="/matches/:matchId" element={<Match />} />
           </Routes>

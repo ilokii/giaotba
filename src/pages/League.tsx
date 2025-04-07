@@ -2,8 +2,10 @@ import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useData } from '../hooks/useData';
 import { Match, Team } from '../types/data';
+import PlayerLink from '../components/PlayerLink';
 
 interface PlayerStats {
+  id: string;
   number: string;
   leagueName: string;
   teamName: string;
@@ -33,6 +35,7 @@ export default function League() {
     
     // 创建球员统计数据映射
     const statsMap = new Map<string, {
+      id: string;
       number: string;
       leagueName: string;
       teamName: string;
@@ -46,6 +49,7 @@ export default function League() {
     teams.forEach(team => {
       team.players.forEach(player => {
         statsMap.set(player.id, {
+          id: player.id,
           number: player.number,
           leagueName: player.leagueName,
           teamName: team.name,
@@ -74,6 +78,7 @@ export default function League() {
     // 计算场均数据并排序
     return Array.from(statsMap.values())
       .map(stats => ({
+        id: stats.id,
         number: stats.number,
         leagueName: stats.leagueName,
         teamName: stats.teamName,
@@ -239,13 +244,20 @@ export default function League() {
               </thead>
               <tbody>
                 {playerStats.map((player, index) => (
-                  <tr key={`${player.leagueName}-${player.number}`}>
+                  <tr key={`${player.id}-${player.number}`}>
                     <td>{player.number}</td>
-                    <td>{player.leagueName}</td>
+                    <td>
+                      <PlayerLink 
+                        playerId={player.id} 
+                        leagueName={player.leagueName}
+                        inLeague={true}
+                      />
+                    </td>
                     <td>
                       {player.teamLogo && (
                         <img src={player.teamLogo} alt={player.teamName} className="team-logo-small" />
                       )}
+                      <span>{player.teamName}</span>
                     </td>
                     <td>{player.avgPoints}</td>
                     <td>{player.avgRebounds}</td>

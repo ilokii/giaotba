@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useData } from '../hooks/useData';
 import { Match, Team as TeamType } from '../types/data';
+import PlayerLink from '../components/PlayerLink';
 
 interface TeamStats {
   totalGames: number;
@@ -128,9 +129,8 @@ export default function Team() {
 
       return {
         id: player.id,
-        name: player.leagueName,
+        leagueName: player.leagueName,
         number: player.number,
-        photo: player.photo,
         avgPoints: gamesPlayed > 0 ? totalPoints / gamesPlayed : 0,
         avgRebounds: gamesPlayed > 0 ? totalRebounds / gamesPlayed : 0,
       };
@@ -196,8 +196,12 @@ export default function Team() {
               {playerStats.map(player => (
                 <tr key={player.id}>
                   <td className="player-info">
-                    {player.photo && <img src={player.photo} alt={player.name} className="player-photo" />}
-                    <span>{player.name}</span>
+                    <PlayerLink 
+                      playerId={player.id} 
+                      showPhoto={true}
+                      leagueName={player.leagueName}
+                      inLeague={true}
+                    />
                   </td>
                   <td>{player.number}</td>
                   <td>{player.avgPoints.toFixed(1)}</td>

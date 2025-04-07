@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useData } from '../hooks/useData';
+import { PlayerBase } from '../types/data';
 
 // 定义路径映射表
 const pathMap: { [key: string]: string } = {
   '': '主页',
   'leagues': '联赛',
-  'players': '球员',
+  'players': '联赛球员',
   'teams': '球队',
   'matches': '比赛'
 };
@@ -19,6 +20,33 @@ export default function Breadcrumb() {
   // 如果是首页，不显示面包屑
   if (pathnames.length === 0) {
     return null;
+  }
+
+  // 处理球员列表页面
+  if (pathnames[0] === 'players' && !pathnames[1]) {
+    return (
+      <div className="breadcrumb">
+        <Link to="/" className="breadcrumb-link">主页</Link>
+        <span className="breadcrumb-separator">/</span>
+        <span className="breadcrumb-current">联赛球员</span>
+      </div>
+    );
+  }
+
+  // 处理球员详情页面
+  if (pathnames[0] === 'players' && pathnames[1] && dataManager) {
+    const playerBase = dataManager.getPlayerBase(pathnames[1]) as PlayerBase | undefined;
+    if (playerBase) {
+      return (
+        <div className="breadcrumb">
+          <Link to="/" className="breadcrumb-link">主页</Link>
+          <span className="breadcrumb-separator">/</span>
+          <Link to="/players" className="breadcrumb-link">联赛球员</Link>
+          <span className="breadcrumb-separator">/</span>
+          <span className="breadcrumb-current">{playerBase.name}</span>
+        </div>
+      );
+    }
   }
 
   // 处理球队详情页的特殊情况

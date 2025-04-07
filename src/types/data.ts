@@ -23,6 +23,14 @@ export interface TeamStats {
   gamesPlayed: number;
 }
 
+// 球员基础信息类型
+export interface PlayerBase {
+  id: string;
+  name: string;
+  photo?: string;
+  avatar?: string;
+}
+
 // 球员数据类型
 export interface Player {
   id: string;

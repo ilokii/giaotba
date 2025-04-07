@@ -3,13 +3,13 @@
     "name": "Xu da",
     "avatar": "/players/xuda.jpg"
   },
-  "alang": {
-    "name": "alang",
-    "avatar": "/players/alang.jpg"
+  "shenjilang": {
+    "name": "Shen Jilang",
+    "avatar": "/players/shenjilang.jpg"
   },
-  "laoliu": {
-    "name": "laoliu",
-    "avatar": "/players/laoliu.jpg"
+  "liuweinan": {
+    "name": "Liu Weinan",
+    "avatar": "/players/liuweinan.jpg"
   },
   "xielin": {
     "name": "Xie lin",
@@ -23,25 +23,25 @@
     "name": "Wang Guohui",
     "avatar": "/players/wangguohui.jpg"
   },
-  "bingbro": {
-    "name": "bingbro",
-    "avatar": "/players/bingbro.jpg"
+  "dongchongchi": {
+    "name": "Dong Chongchi",
+    "avatar": "/players/dongchongchi.jpg"
   },
   "wangke": {
     "name": "Wang Ke",
     "avatar": "/players/wangke.jpg"
   },
-  "luo": {
-    "name": "luo",
-    "avatar": "/players/luo.jpg"
+  "luoqingren": {
+    "name": "Luo Qingren",
+    "avatar": "/players/luoqingren.jpg"
   },
-  "lee": {
-    "name": "lee",
-    "avatar": "/players/lee.jpg"
+  "lixiwei": {
+    "name": "Li Xiwei",
+    "avatar": "/players/lixiwei.jpg"
   },
-  "laomeng": {
-    "name": "laomeng",
-    "avatar": "/players/laomeng.jpg"
+  "mengweiheng": {
+    "name": "Meng Weiheng",
+    "avatar": "/players/mengweiheng.jpg"
   },
   "moyafei": {
     "name": "Mo Yafei",
@@ -71,12 +71,16 @@
     "name": "Chen Kun",
     "avatar": "/players/chenkun.jpg"
   },
-  "weide": {
-    "name": "Wei De",
-    "avatar": "/players/weide.jpg"
+  "luoqing": {
+    "name": "Luo Qing",
+    "avatar": "/players/luoqing.jpg"
   },
   "xuhaihang": {
     "name": "Xu Haihang",
     "avatar": "/players/xuhaihang.jpg"
+  },
+  "xiejiaxin": {
+    "name": "Xie Jiaxin",
+    "avatar": "/players/xiejiaxin.jpg"
   }
 } 
