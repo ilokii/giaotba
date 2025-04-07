@@ -79,6 +79,16 @@ export default function Match() {
       <div className="match-header">
         <div className="match-time">
           {new Date(match.time).toLocaleDateString()}
+          {match.video && (
+            <a 
+              href={match.video} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="match-video-link"
+            >
+              观看回放
+            </a>
+          )}
         </div>
         <div className="match-score">
           <Link to={`/teams/${homeTeam.id}`} className="team-info">

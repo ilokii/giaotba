@@ -13,6 +13,10 @@
   font-size: 1rem;
   color: #666;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .match-score {
@@ -114,6 +118,25 @@
 
 .not-played {
   color: #9ca3af;
+}
+
+.match-video-link {
+  display: inline-flex;
+  align-items: center;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.match-video-link:hover {
+  color: #1d4ed8;
+}
+
+.match-video-link::before {
+  content: "▶";
+  margin-right: 0.25rem;
+  font-size: 0.75rem;
 }
 
 @media (max-width: 768px) {

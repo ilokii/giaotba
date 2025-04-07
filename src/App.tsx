@@ -1,8 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Breadcrumb from './components/Breadcrumb';
-import Home from './pages/Home';
 import LeagueList from './pages/LeagueList';
 import League from './pages/League';
 import Team from './pages/Team';
@@ -23,7 +22,7 @@ function App() {
         {/* 主体内容区域 */}
         <main className="main">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Navigate to="/leagues" replace />} />
             <Route path="/leagues" element={<LeagueList />} />
             <Route path="/leagues/:leagueId" element={<League />} />
             <Route path="/teams/:teamId" element={<Team />} />

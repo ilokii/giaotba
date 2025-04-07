@@ -61,6 +61,7 @@ export interface Match {
     home: number;
     away: number;
   };
+  video?: string;
   playerStats?: {
     [playerId: string]: {
       played: boolean;
