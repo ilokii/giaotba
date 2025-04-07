@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useData } from '../hooks/useData';
 
 // 定义路径映射表
 const pathMap: { [key: string]: string } = {
@@ -12,11 +13,49 @@ const pathMap: { [key: string]: string } = {
 
 export default function Breadcrumb() {
   const location = useLocation();
+  const { dataManager } = useData();
   const pathnames = location.pathname.split('/').filter(x => x);
 
   // 如果是首页，不显示面包屑
   if (pathnames.length === 0) {
     return null;
+  }
+
+  // 处理球队详情页的特殊情况
+  if (pathnames[0] === 'teams' && pathnames[1] && dataManager) {
+    const team = dataManager.getTeam(pathnames[1]);
+    if (team) {
+      const league = dataManager.getLeague(team.leagueId);
+      return (
+        <div className="breadcrumb">
+          <Link to="/" className="breadcrumb-link">主页</Link>
+          <span className="breadcrumb-separator">/</span>
+          <Link to="/leagues" className="breadcrumb-link">联赛</Link>
+          <span className="breadcrumb-separator">/</span>
+          <Link to={`/leagues/${team.leagueId}`} className="breadcrumb-link">
+            {league?.name || '未知联赛'}
+          </Link>
+          <span className="breadcrumb-separator">/</span>
+          <span className="breadcrumb-current">{team.name}</span>
+        </div>
+      );
+    }
+  }
+
+  // 处理联赛详情页
+  if (pathnames[0] === 'leagues' && pathnames[1] && dataManager) {
+    const league = dataManager.getLeague(pathnames[1]);
+    if (league) {
+      return (
+        <div className="breadcrumb">
+          <Link to="/" className="breadcrumb-link">主页</Link>
+          <span className="breadcrumb-separator">/</span>
+          <Link to="/leagues" className="breadcrumb-link">联赛</Link>
+          <span className="breadcrumb-separator">/</span>
+          <span className="breadcrumb-current">{league.name}</span>
+        </div>
+      );
+    }
   }
 
   return (
@@ -28,7 +67,15 @@ export default function Breadcrumb() {
         const isLast = index === pathnames.length - 1;
         
         // 获取显示名称
-        const displayName = pathMap[value] || value;
+        let displayName = pathMap[value] || value;
+
+        // 如果是联赛ID，尝试获取联赛名称
+        if (pathnames[0] === 'leagues' && index === 1 && dataManager) {
+          const league = dataManager.getLeague(value);
+          if (league) {
+            displayName = league.name;
+          }
+        }
 
         return (
           <React.Fragment key={routeTo}>

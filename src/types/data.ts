@@ -10,19 +10,9 @@ export interface League {
 export interface Team {
   id: string;
   name: string;
-  leagueId: string;
   logo?: string;
-  players: {
-    id: string;
-    number: string;
-    leagueName: string;
-  }[];
-  stats?: {
-    wins: number;
-    losses: number;
-    points: number;
-    gamesPlayed: number;
-  };
+  leagueId: string;
+  players: Player[];
 }
 
 // 球队统计数据
@@ -38,9 +28,8 @@ export interface Player {
   id: string;
   name: string;
   number: string;
-  position: string;
-  teamId: string;
-  stats: PlayerStats;
+  photo?: string;
+  leagueName: string;
 }
 
 // 球员统计数据
@@ -56,10 +45,9 @@ export interface PlayerStats {
 // 比赛数据类型
 export interface Match {
   id: string;
-  leagueId: string;
+  time: string;
   homeTeam: string;
   awayTeam: string;
-  time: string;
   score?: {
     home: number;
     away: number;
@@ -83,11 +71,14 @@ export enum MatchStatus {
 
 // 比赛统计数据
 export interface MatchStats {
-  playerStats: {
-    [playerId: string]: {
-      points: number;
-      rebounds: number;
-      assists: number;
-    };
-  };
+  teamId: string;
+  points: number;
+  rebounds: number;
+  players: PlayerMatchStats[];
+}
+
+export interface PlayerMatchStats {
+  id: string;
+  points: number;
+  rebounds: number;
 } 
