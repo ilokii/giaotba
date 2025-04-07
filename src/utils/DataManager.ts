@@ -91,7 +91,9 @@ export default class DataManager {
   private validatePlayerBase(player: any): player is PlayerBase {
     return (
       typeof player.id === 'string' &&
-      typeof player.name === 'string'
+      typeof player.name === 'string' &&
+      (player.avatar === undefined || typeof player.avatar === 'string') &&
+      (player.photo === undefined || typeof player.photo === 'string')
     );
   }
 

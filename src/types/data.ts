@@ -53,6 +53,7 @@ export interface PlayerStats {
 // 比赛数据类型
 export interface Match {
   id: string;
+  leagueId: string;
   time: string;
   homeTeam: string;
   awayTeam: string;

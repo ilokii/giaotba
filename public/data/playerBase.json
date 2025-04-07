@@ -1,86 +1,86 @@
 {
   "xuda": {
     "name": "Xu da",
-    "avatar": "/players/xuda.jpg"
+    "avatar": "/images/players/xuda.png"
   },
   "shenjilang": {
     "name": "Shen Jilang",
-    "avatar": "/players/shenjilang.jpg"
+    "avatar": "/images/players/shenjilang.png"
   },
   "liuweinan": {
     "name": "Liu Weinan",
-    "avatar": "/players/liuweinan.jpg"
+    "avatar": "/images/players/liuweinan.png"
   },
   "xielin": {
     "name": "Xie lin",
-    "avatar": "/players/xielin.jpg"
+    "avatar": "/images/players/xielin.png"
   },
   "hekunjie": {
     "name": "He Kunjie",
-    "avatar": "/players/hekunjie.jpg"
+    "avatar": "/images/players/hekunjie.png"
   },
   "wangguohui": {
     "name": "Wang Guohui",
-    "avatar": "/players/wangguohui.jpg"
+    "avatar": "/images/players/wangguohui.png"
   },
   "dongchongchi": {
     "name": "Dong Chongchi",
-    "avatar": "/players/dongchongchi.jpg"
+    "avatar": "/images/players/default.png"
   },
   "wangke": {
     "name": "Wang Ke",
-    "avatar": "/players/wangke.jpg"
+    "avatar": "/images/players/wangke.png"
   },
   "luoqingren": {
     "name": "Luo Qingren",
-    "avatar": "/players/luoqingren.jpg"
+    "avatar": "/images/players/luoqingren.png"
   },
   "lixiwei": {
     "name": "Li Xiwei",
-    "avatar": "/players/lixiwei.jpg"
+    "avatar": "/images/players/lixiwei.png"
   },
   "mengweiheng": {
     "name": "Meng Weiheng",
-    "avatar": "/players/mengweiheng.jpg"
+    "avatar": "/images/players/mengweiheng.png"
   },
   "moyafei": {
     "name": "Mo Yafei",
-    "avatar": "/players/moyafei.jpg"
+    "avatar": "/images/players/moyafei.png"
   },
   "wangxuefeng": {
     "name": "Wang Xuefeng",
-    "avatar": "/players/wangxuefeng.jpg"
+    "avatar": "/images/players/wangxuefeng.png"
   },
   "luzhuoxuan": {
     "name": "Lu Zhuoxuan",
-    "avatar": "/players/luzhuoxuan.jpg"
+    "avatar": "/images/players/luzhuoxuan.png"
   },
   "hushiping": {
     "name": "Hu Shiping",
-    "avatar": "/players/hushiping.jpg"
+    "avatar": "/images/players/hushiping.png"
   },
   "hubowen": {
     "name": "hubowen",
-    "avatar": "/players/hubowen.jpg"
+    "avatar": "/images/players/hubowen.png"
   },
   "zhurui": {
     "name": "Zhu Rui",
-    "avatar": "/players/zhurui.jpg"
+    "avatar": "/images/players/default.png"
   },
   "chenkun": {
     "name": "Chen Kun",
-    "avatar": "/players/chenkun.jpg"
+    "avatar": "/images/players/chenkun.png"
   },
   "luoqing": {
     "name": "Luo Qing",
-    "avatar": "/players/luoqing.jpg"
+    "avatar": "/images/players/luoqing.png"
   },
   "xuhaihang": {
     "name": "Xu Haihang",
-    "avatar": "/players/xuhaihang.jpg"
+    "avatar": "/images/players/xuhaihang.png"
   },
   "xiejiaxin": {
     "name": "Xie Jiaxin",
-    "avatar": "/players/xiejiaxin.jpg"
+    "avatar": "/images/players/xiejiaxin.png"
   }
 } 

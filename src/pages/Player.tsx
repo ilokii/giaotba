@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useData } from '../hooks/useData';
+import { PlayerBase } from '../types/data';
 
 export default function Player() {
   const { playerId } = useParams<{ playerId: string }>();
@@ -15,7 +16,12 @@ export default function Player() {
     }
 
     // 获取球员基本信息
-    const playerBase = dataManager.getPlayerBase(playerId);
+    const playerBaseResult = dataManager.getPlayerBase(playerId);
+    // 确保playerBase是PlayerBase类型而不是Map
+    const playerBase = playerBaseResult && !(playerBaseResult instanceof Map)
+      ? playerBaseResult as PlayerBase
+      : null;
+      
     if (!playerBase) {
       return { playerBase: null, leagues: [], matchRecords: [], stats: null };
     }
@@ -112,8 +118,12 @@ export default function Player() {
       {/* 球员基本信息 */}
       <div className="player-header">
         <div className="player-info">
-          {playerBase.photo && (
+          {playerBase.avatar ? (
+            <img src={playerBase.avatar} alt={playerBase.name} className="player-photo-large" />
+          ) : playerBase.photo ? (
             <img src={playerBase.photo} alt={playerBase.name} className="player-photo-large" />
+          ) : (
+            <img src="/images/players/default.png" alt={playerBase.name} className="player-photo-large" />
           )}
           <h1 className="player-name-large">{playerBase.name}</h1>
         </div>

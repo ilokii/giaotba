@@ -13,16 +13,19 @@ export const Players: React.FC = () => {
     return <div>加载中...</div>;
   }
 
-  const playerBaseMap = dataManager.getPlayerBase() as Map<string, PlayerBase>;
+  // 获取所有球员数据
+  const playerBaseMapResult = dataManager.getPlayerBase();
   const players: Record<string, PlayerBase> = {};
   
-  // 转换 Map 为对象
-  playerBaseMap.forEach((player, id) => {
-    players[id] = {
-      ...player,
-      photo: player.avatar || player.photo // 优先使用 avatar，如果没有则使用 photo
-    };
-  });
+  // 确保是Map类型并转换为对象
+  if (playerBaseMapResult instanceof Map) {
+    playerBaseMapResult.forEach((player, id) => {
+      players[id] = {
+        ...player,
+        photo: player.avatar || player.photo || '/images/players/default.png'
+      };
+    });
+  }
 
   return (
     <div className="players-container">

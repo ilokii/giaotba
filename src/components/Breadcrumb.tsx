@@ -49,6 +49,30 @@ export default function Breadcrumb() {
     }
   }
 
+  // 处理比赛详情页面
+  if (pathnames[0] === 'matches' && pathnames[1] && dataManager) {
+    const match = dataManager.getMatch(pathnames[1]);
+    if (match) {
+      const homeTeam = dataManager.getTeam(match.homeTeam);
+      const awayTeam = dataManager.getTeam(match.awayTeam);
+      const league = dataManager.getLeague(match.leagueId);
+      
+      if (homeTeam && awayTeam && league) {
+        return (
+          <div className="breadcrumb">
+            <Link to="/" className="breadcrumb-link">主页</Link>
+            <span className="breadcrumb-separator">/</span>
+            <Link to="/leagues" className="breadcrumb-link">联赛</Link>
+            <span className="breadcrumb-separator">/</span>
+            <Link to={`/leagues/${league.id}`} className="breadcrumb-link">{league.name}</Link>
+            <span className="breadcrumb-separator">/</span>
+            <span className="breadcrumb-current">{homeTeam.name} vs {awayTeam.name}</span>
+          </div>
+        );
+      }
+    }
+  }
+
   // 处理球队详情页的特殊情况
   if (pathnames[0] === 'teams' && pathnames[1] && dataManager) {
     const team = dataManager.getTeam(pathnames[1]);
