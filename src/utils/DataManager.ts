@@ -238,4 +238,13 @@ export default class DataManager {
     this.cache.matches.clear();
     this.cache.playerBase.clear();
   }
+
+  public getTeamIdByName(teamName: string): string | undefined {
+    for (const [id, team] of this.cache.teams) {
+      if (team.name === teamName) {
+        return id;
+      }
+    }
+    return undefined;
+  }
 } 

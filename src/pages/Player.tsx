@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useData } from '../hooks/useData';
 import { PlayerBase } from '../types/data';
 
@@ -54,8 +54,10 @@ export default function Player() {
             leagueName: league.name,
             playerLeagueName: playerInTeam.leagueName,
             time: match.time,
-            teamName: playerTeam.name,
-            opposingTeamName: opposingTeam.name,
+            teamId: playerTeam.id,
+            teamLogo: playerTeam.logo || '',
+            opposingTeamId: opposingTeam.id,
+            opposingTeamLogo: opposingTeam.logo || '',
             number: playerInTeam.number,
             points: playerStats.points,
             rebounds: playerStats.rebounds,
@@ -191,19 +193,53 @@ export default function Player() {
                 <th>对手</th>
                 <th>得分</th>
                 <th>篮板</th>
+                <th>操作</th>
               </tr>
             </thead>
             <tbody>
               {filteredMatchRecords.map(record => (
                 <tr key={record.matchId}>
-                  <td>{record.leagueName}</td>
+                  <td>
+                    <Link to={`/leagues/${record.leagueId}`}>
+                      {record.leagueName}
+                    </Link>
+                  </td>
                   <td>{new Date(record.time).toLocaleDateString()}</td>
                   <td>{record.number}</td>
                   <td>{record.playerLeagueName}</td>
-                  <td>{record.teamName}</td>
-                  <td>{record.opposingTeamName}</td>
+                  <td>
+                    <Link to={`/teams/${record.teamId}`}>
+                      {record.teamLogo && (
+                        <img 
+                          src={record.teamLogo} 
+                          alt="球队" 
+                          className="team-logo-small" 
+                        />
+                      )}
+                    </Link>
+                  </td>
+                  <td>
+                    <Link to={`/teams/${record.opposingTeamId}`}>
+                      {record.opposingTeamLogo && (
+                        <img 
+                          src={record.opposingTeamLogo} 
+                          alt="对手" 
+                          className="team-logo-small" 
+                        />
+                      )}
+                    </Link>
+                  </td>
                   <td>{record.points}</td>
                   <td>{record.rebounds}</td>
+                  <td>
+                    <Link 
+                      to={`/matches/${record.matchId}`}
+                      className="match-detail-link"
+                      title="查看比赛详情"
+                    >
+                      →
+                    </Link>
+                  </td>
                 </tr>
               ))}
             </tbody>

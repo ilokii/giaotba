@@ -120,6 +120,7 @@ export default function Match() {
                         playerId={player.id}
                         leagueName={player.leagueName}
                         inLeague={true}
+                        showPhoto={true}
                       />
                     </div>
                   </td>
@@ -153,6 +154,7 @@ export default function Match() {
                         playerId={player.id}
                         leagueName={player.leagueName}
                         inLeague={true}
+                        showPhoto={true}
                       />
                     </div>
                   </td>

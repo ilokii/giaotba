@@ -255,9 +255,10 @@ export default function League() {
                     </td>
                     <td>
                       {player.teamLogo && (
-                        <img src={player.teamLogo} alt={player.teamName} className="team-logo-small" />
+                        <Link to={`/teams/${dataManager.getTeamIdByName(player.teamName)}`}>
+                          <img src={player.teamLogo} alt={player.teamName} className="team-logo-small" />
+                        </Link>
                       )}
-                      <span>{player.teamName}</span>
                     </td>
                     <td>{player.avgPoints}</td>
                     <td>{player.avgRebounds}</td>
