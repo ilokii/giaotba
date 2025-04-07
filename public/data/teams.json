@@ -1,0 +1,135 @@
+{
+  "luosidawang": {
+    "leagueId": "intime_giaot_league_s2",
+    "name": "螺丝大王",
+    "logo": "/images/teams/gbaS2/luosidawang.png",
+    "players": [
+      {
+        "id": "xuda",
+        "number": "2",
+        "leagueName": "XUDA"
+      },
+      {
+        "id": "wangguohui",
+        "number": "12",
+        "leagueName": "找东西"
+      },
+      {
+        "id": "husiping",
+        "number": "17",
+        "leagueName": "HUSPINE"
+      },
+      {
+        "id": "luo",
+        "number": "21",
+        "leagueName": "LUO"
+      },
+      {
+        "id": "xiejiaxin",
+        "number": "23",
+        "leagueName": "XIEJIAXIN"
+      }
+    ]
+  },
+  "aoteman": {
+    "leagueId": "intime_giaot_league_s2",
+    "name": "奥特曼们",
+    "logo": "/images/teams/gbaS2/aoteman.png",
+    "players": [
+      {
+        "id": "hubowen",
+        "number": "2",
+        "leagueName": "诺亚"
+      },
+      {
+        "id": "wangke",
+        "number": "5",
+        "leagueName": "赛罗"
+      },
+      {
+        "id": "mengweiheng",
+        "number": "7",
+        "leagueName": "雷欧"
+      },
+      {
+        "id": "shenjilang",
+        "number": "10",
+        "leagueName": "艾斯"
+      },
+      {
+        "id": "weide",
+        "number": "3",
+        "leagueName": "韦德"
+      }
+    ]
+  },
+  "laolimoyu": {
+    "leagueId": "intime_giaot_league_s2",
+    "name": "老李摸鱼",
+    "logo": "/images/teams/gbaS2/laolimoyu.png",
+    "players": [
+      {
+        "id": "lixiwei",
+        "number": "4",
+        "leagueName": "VIRGIL"
+      },
+      {
+        "id": "moyafei",
+        "number": "10",
+        "leagueName": "MO"
+      },
+      {
+        "id": "xielin",
+        "number": "21",
+        "leagueName": "XIELIN"
+      },
+      {
+        "id": "liuweinan",
+        "number": "23",
+        "leagueName": "LIU WN"
+      },
+      {
+        "id": "xuhaihang",
+        "number": "42",
+        "leagueName": "KLEBER"
+      }
+    ]
+  },
+  "pilifenghuolang": {
+    "leagueId": "intime_giaot_league_s2",
+    "name": "霹雳烽火狼",
+    "logo": "/images/teams/gbaS2/pilifenghuolang.png",
+    "players": [
+      {
+        "id": "chenkun",
+        "number": "1",
+        "leagueName": "CKK"
+      },
+      {
+        "id": "hekunjie",
+        "number": "3",
+        "leagueName": "HKJ"
+      },
+      {
+        "id": "wangxuefeng",
+        "number": "7",
+        "leagueName": "WXF"
+      },
+      {
+        "id": "luzhuoxuan",
+        "number": "27",
+        "leagueName": "LZX"
+      },
+      {
+        "id": "bingbro",
+        "number": "81",
+        "leagueName": "兵哥哥"
+      },
+      {
+        "id": "zhurui",
+        "number": "20",
+        "leagueName": "吉诺比利"
+      }
+    ]
+  }
+} 

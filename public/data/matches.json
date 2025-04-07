@@ -1,0 +1,215 @@
+{
+  "gbaS2M1": {
+    "leagueId": "intime_giaot_league_s2",
+    "time": "2025-02-26",
+    "homeTeam": "luosidawang",
+    "awayTeam": "pilifenghuolang",
+    "score": {
+      "home": 11,
+      "away": 6
+    },
+    "playerStats": {
+      "xuda": {
+        "played": true,
+        "points": 5,
+        "rebounds": 4
+      },
+      "wangguohui": {
+        "played": true,
+        "points": 3,
+        "rebounds": 9
+      },
+      "hushiping": {
+        "played": true,
+        "points": 0,
+        "rebounds": 5
+      },
+      "luo": {
+        "played": true,
+        "points": 3,
+        "rebounds": 12
+      },
+      "chenkun": {
+        "played": true,
+        "points": 0,
+        "rebounds": 1
+      },
+      "hekunjie": {
+        "played": true,
+        "points": 3,
+        "rebounds": 3
+      },
+      "wangxuefeng": {
+        "played": true,
+        "points": 1,
+        "rebounds": 4
+      },
+      "luzhuoxuan": {
+        "played": true,
+        "points": 2,
+        "rebounds": 5
+      }
+    }
+  },
+  "gbaS2M2": {
+    "leagueId": "intime_giaot_league_s2",
+    "time": "2025-02-26",
+    "homeTeam": "aoteman",
+    "awayTeam": "laolimoyu",
+    "score": {
+      "home": 10,
+      "away": 11
+    },
+    "playerStats": {
+      "hubowen": {
+        "played": true,
+        "points": 1,
+        "rebounds": 4
+      },
+      "wangke": {
+        "played": true,
+        "points": 0,
+        "rebounds": 13
+      },
+      "mengweiheng": {
+        "played": true,
+        "points": 2,
+        "rebounds": 5
+      },
+      "shenjilang": {
+        "played": true,
+        "points": 7,
+        "rebounds": 12
+      },
+      "lixiwei": {
+        "played": true,
+        "points": 2,
+        "rebounds": 2
+      },
+      "moyafei": {
+        "played": true,
+        "points": 1,
+        "rebounds": 4
+      },
+      "xielin": {
+        "played": true,
+        "points": 4,
+        "rebounds": 6
+      },
+      "liuweinan": {
+        "played": true,
+        "points": 4,
+        "rebounds": 16
+      }
+    }
+  },
+  "gbaS2M3": {
+    "leagueId": "intime_giaot_league_s2",
+    "time": "2025-03-25",
+    "homeTeam": "luosidawang",
+    "awayTeam": "pilifenghuolang",
+    "score": {
+      "home": 11,
+      "away": 7
+    },
+    "playerStats": {
+      "xuda": {
+        "played": true,
+        "points": 4,
+        "rebounds": 1
+      },
+      "wangguohui": {
+        "played": true,
+        "points": 4,
+        "rebounds": 6
+      },
+      "hushiping": {
+        "played": true,
+        "points": 2,
+        "rebounds": 0
+      },
+      "luo": {
+        "played": true,
+        "points": 1,
+        "rebounds": 6
+      },
+      "chenkun": {
+        "played": true,
+        "points": 0,
+        "rebounds": 0
+      },
+      "hekunjie": {
+        "played": true,
+        "points": 2,
+        "rebounds": 1
+      },
+      "wangxuefeng": {
+        "played": true,
+        "points": 2,
+        "rebounds": 1
+      },
+      "bingbro": {
+        "played": true,
+        "points": 3,
+        "rebounds": 11
+      }
+    }
+  },
+  "gbaS2M4": {
+    "leagueId": "intime_giaot_league_s2",
+    "time": "2025-04-02",
+    "homeTeam": "aoteman",
+    "awayTeam": "pilifenghuolang",
+    "score": {
+      "home": 11,
+      "away": 7
+    },
+    "playerStats": {
+      "hubowen": {
+        "played": true,
+        "points": 0,
+        "rebounds": 2
+      },
+      "wangke": {
+        "played": true,
+        "points": 4,
+        "rebounds": 7
+      },
+      "mengweiheng": {
+        "played": true,
+        "points": 0,
+        "rebounds": 3
+      },
+      "shenjilang": {
+        "played": true,
+        "points": 7,
+        "rebounds": 11
+      },
+      "weide": {
+        "played": true,
+        "points": 0,
+        "rebounds": 1
+      },
+      "hekunjie": {
+        "played": true,
+        "points": 7,
+        "rebounds": 2
+      },
+      "wangxuefeng": {
+        "played": true,
+        "points": 0,
+        "rebounds": 4
+      },
+      "luzhuoxuan": {
+        "played": true,
+        "points": 0,
+        "rebounds": 1
+      },
+      "zhurui": {
+        "played": true,
+        "points": 0,
+        "rebounds": 5
+      }
+    }
+  }
+} 

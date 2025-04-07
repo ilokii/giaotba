@@ -1,0 +1,7 @@
+{
+  "intime_giaot_league_s2": {
+    "name": "银泰城GIAOT杯-第二赛季",
+    "teams": ["luosidawang", "pilifenghuolang", "laolimoyu", "aoteman"],
+    "matches": ["gbaS2M1","gbaS2M2","gbaS2M3","gbaS2M4"]
+  }
+} 
