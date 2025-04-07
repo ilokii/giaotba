@@ -11,9 +11,6 @@ export default function Navigation() {
 
   return (
     <nav className="nav">
-      <Link to="/" className={`nav-link ${isActive('/')}`}>
-        主页
-      </Link>
       <Link to="/leagues" className={`nav-link ${isActive('/leagues')}`}>
         篮球联赛
       </Link>

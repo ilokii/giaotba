@@ -187,8 +187,8 @@ export default function Player() {
               <tr>
                 <th>联赛</th>
                 <th>时间</th>
-                <th>球衣号码</th>
-                <th>联赛名称</th>
+                <th>号码</th>
+                <th>名称</th>
                 <th>球队</th>
                 <th>对手</th>
                 <th>得分</th>
