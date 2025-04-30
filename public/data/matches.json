@@ -215,5 +215,48 @@
         "rebounds": 5
       }
     }
+  },
+  "gbaS2M5": {
+    "leagueId": "intime_giaot_league_s2",
+    "time": "2025-04-16",
+    "homeTeam": "pilifenghuolang",
+    "awayTeam": "laolimoyu",
+    "score": {
+      "home": 11,
+      "away": 6
+    },
+    "video": "https://b23.tv/9JCxiBO",
+    "playerStats": {
+      "hekunjie": {
+        "played": true,
+        "points": 4,
+        "rebounds": 3
+      },
+      "chenkun": {
+        "played": true,
+        "points": 3,
+        "rebounds": 4
+      },
+      "luzhuoxuan": {
+        "played": true,
+        "points": 4,
+        "rebounds": 7
+      },
+      "xuhaihang": {
+        "played": true,
+        "points": 0,
+        "rebounds": 7
+      },
+      "moyafei": {
+        "played": true,
+        "points": 2,
+        "rebounds": 5
+      },
+      "linjiahao": {
+        "played": true,
+        "points": 4,
+        "rebounds": 6
+      }
+    }
   }
 } 
