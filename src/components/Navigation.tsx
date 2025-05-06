@@ -17,6 +17,9 @@ export default function Navigation() {
       <Link to="/players" className={`nav-link ${isActive('/players')}`}>
         联赛球员
       </Link>
+      <Link to="/support" className="nav-link">
+        支持者计划
+      </Link>
     </nav>
   );
 } 

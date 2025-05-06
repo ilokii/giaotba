@@ -8,6 +8,7 @@ import Team from './pages/Team';
 import Player from './pages/Player';
 import Match from './pages/Match';
 import { Players } from './pages/Players';
+import Support from './pages/Support';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/players" element={<Players />} />
             <Route path="/players/:playerId" element={<Player />} />
             <Route path="/matches/:matchId" element={<Match />} />
+            <Route path="/support" element={<Support />} />
           </Routes>
         </main>
       </div>

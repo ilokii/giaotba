@@ -1,0 +1,27 @@
+/* 白银支持者样式 */
+.supporter-silver {
+  background: linear-gradient(180deg, #ffffff 0%, #c0c0c0 50%, #8b8b8b 51%, #c0c0c0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  text-shadow: 
+    1px 1px 1px rgba(0,0,0,0.2),
+    -1px -1px 1px rgba(255,255,255,0.3);
+  letter-spacing: 0.5px;
+  padding: 0 2px;
+}
+
+/* 黄金支持者样式 */
+.supporter-golden {
+  background: linear-gradient(180deg, #ffd700 0%, #ffc800 50%, #e6b800 51%, #ffd700 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  text-shadow: 
+    1px 1px 1px rgba(0,0,0,0.2),
+    -1px -1px 1px rgba(255,255,255,0.3);
+  letter-spacing: 0.5px;
+  padding: 0 2px;
+} 

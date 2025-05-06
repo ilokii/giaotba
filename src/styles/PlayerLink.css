@@ -1,0 +1,13 @@
+/* 普通文本样式的球员链接 */
+.player-link-plain {
+  text-decoration: none;
+  color: #111827;  /* 与普通文本相同的颜色 */
+  font-weight: normal;
+}
+
+/* 保持支持者样式不变 */
+.player-link-plain .supporter-silver,
+.player-link-plain .supporter-golden {
+  /* 这些类的样式已在 supporters.css 中定义 */
+  display: inline-block;
+} 
