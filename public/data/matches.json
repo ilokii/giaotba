@@ -258,5 +258,63 @@
         "rebounds": 6
       }
     }
+  },
+  "gbaS2M6": {
+    "leagueId": "intime_giaot_league_s2",
+    "time": "2025-05-07",
+    "homeTeam": "luosidawang",
+    "awayTeam": "aoteman",
+    "score": {
+      "home": 11,
+      "away": 4
+    },
+    "video": "https://www.bilibili.com/video/BV12nVhzjERZ/",
+    "playerStats": {
+      "xuda": {
+        "played": true,
+        "points": 5,
+        "rebounds": 4
+      },
+      "wangguohui": {
+        "played": true,
+        "points": 2,
+        "rebounds": 4
+      },
+      "hushiping": {
+        "played": true,
+        "points": 1,
+        "rebounds": 0
+      },
+      "luoqingren": {
+        "played": true,
+        "points": 1,
+        "rebounds": 5
+      },
+      "xiejiaxin": {
+        "played": true,
+        "points": 2,
+        "rebounds": 1
+      },
+      "hubowen": {
+        "played": true,
+        "points": 1,
+        "rebounds": 3
+      },
+      "wangke": {
+        "played": true,
+        "points": 0,
+        "rebounds": 9
+      },
+      "shenjilang": {
+        "played": true,
+        "points": 2,
+        "rebounds": 5
+      },
+      "luoqing": {
+        "played": true,
+        "points": 1,
+        "rebounds": 3
+      }
+    }
   }
 } 
