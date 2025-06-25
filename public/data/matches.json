@@ -316,5 +316,96 @@
         "rebounds": 3
       }
     }
+  },
+  "gbaS2M7": {
+    "leagueId": "intime_giaot_league_s2",
+    "time": "2025-06-11",
+    "homeTeam": "laolimoyu",
+    "awayTeam": "pilifenghuolang",
+    "score": {
+      "home": 3,
+      "away": 11
+    },
+    "video": "https://b23.tv/1tFUTyu",
+    "playerStats": {
+      "chenkun": {
+        "played": true,
+        "points": 2,
+        "rebounds": 4
+      },
+      "hekunjie": {
+        "played": true,
+        "points": 3,
+        "rebounds": 1
+      },
+      "luzhuoxuan": {
+        "played": true,
+        "points": 6,
+        "rebounds": 2
+      },
+      "xuhaihang": {
+        "played": true,
+        "points": 0,
+        "rebounds": 4
+      },
+      "moyafei": {
+        "played": true,
+        "points": 3,
+        "rebounds": 5
+      },
+      "dengqiang": {
+        "played": true,
+        "points": 0,
+        "rebounds": 0
+      }
+    }
+  },
+  "gbaS2M8": {
+    "leagueId": "intime_giaot_league_s2",
+    "time": "2025-06-18",
+    "homeTeam": "luosidawang",
+    "awayTeam": "pilifenghuolang",
+    "score": {
+      "home": 11,
+      "away": 8
+    },
+    "video": "https://b23.tv/Y4o783g",
+    "playerStats": {
+      "hushiping": {
+        "played": true,
+        "points": 6,
+        "rebounds": 3
+      },
+      "wangguohui": {
+        "played": true,
+        "points": 2,
+        "rebounds": 3
+      },
+      "xuda": {
+        "played": true,
+        "points": 3,
+        "rebounds": 3
+      },
+      "chencheng": {
+        "played": true,
+        "points": 0,
+        "rebounds": 3
+      },
+      "hekunjie": {
+        "played": true,
+        "points": 3,
+        "rebounds": 2
+      },
+      "zhurui": {
+        "played": true,
+        "points": 0,
+        "rebounds": 5
+      },
+      "luzhuoxuan": {
+        "played": true,
+        "points": 5,
+        "rebounds": 4
+      }
+    }
   }
 } 
